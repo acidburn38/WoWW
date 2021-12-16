@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WoWW", "WoWW\WoWW.csproj", "{5E2321E8-94B6-4CB6-85C1-1782D8A2604A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal.WoWW", "Dal.WoWW", "{C8B83033-619F-4097-A9CE-3416DA0BB766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.WoWW", "DAL.WoWW\DAL.WoWW.csproj", "{BDB41DD2-AD13-45AF-BA57-46731225C72D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E2321E8-94B6-4CB6-85C1-1782D8A2604A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2321E8-94B6-4CB6-85C1-1782D8A2604A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2321E8-94B6-4CB6-85C1-1782D8A2604A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2321E8-94B6-4CB6-85C1-1782D8A2604A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB41DD2-AD13-45AF-BA57-46731225C72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB41DD2-AD13-45AF-BA57-46731225C72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB41DD2-AD13-45AF-BA57-46731225C72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB41DD2-AD13-45AF-BA57-46731225C72D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BDB41DD2-AD13-45AF-BA57-46731225C72D} = {C8B83033-619F-4097-A9CE-3416DA0BB766}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF60CC58-3AF8-498E-9975-5B37B20C0E34}
+	EndGlobalSection
+EndGlobal
