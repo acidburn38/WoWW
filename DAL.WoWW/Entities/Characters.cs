@@ -13,6 +13,8 @@ namespace DAL.WoWW.Entities
         public int LP { get; set; }
         public int AP { get; set; }
         public bool Status { get; set; }
+        public int FK_Type { get; set; }
+        public int FK_Player { get; set; }
 
     }
 }

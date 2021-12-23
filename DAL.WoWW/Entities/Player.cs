@@ -15,5 +15,6 @@ namespace DAL.WoWW.Entities
 
         public string Password { get; set; }
 
+        public int FK_Team { get; set; }
     }
 }

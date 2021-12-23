@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repositories\Team.Services.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Repositories\Team.Services.cs" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
 </Project>

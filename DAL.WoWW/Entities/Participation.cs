@@ -10,6 +10,9 @@ namespace DAL.WoWW.Entities
     {
         public int Id { get; set; }
 
-        public DateTime RegistrationDate { get; set; }
+        public DateTime? RegistrationDate { get; set; }
+        public int FK_Team { get; set; }
+        public int FK_Tournament { get; set; }
+
     }
 }

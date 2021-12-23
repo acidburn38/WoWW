@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Logic\" />
+    <ProjectReference Include="..\DAL.WoWW\DAL.WoWW.csproj" />
   </ItemGroup>
 
 </Project>

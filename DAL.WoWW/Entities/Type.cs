@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.WoWW.Entities
 {
-    public class Type
+    public class TypeCharacter
     {
         public int Id { get; set; }
         public string NameType { get; set; }
