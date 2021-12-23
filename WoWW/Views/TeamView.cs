@@ -89,6 +89,7 @@ namespace WoWW.Views
                 PlayerService _playerService = new PlayerService();
                 _playerService.SetTeamToPlayer(playerId, idTeam);
                 Console.WriteLine("Merci pour votre inscription");
+                //MenuTeam(playerId); FAIRE UNE SUITE POUR RETOURNER AU MENU JOUEUR
             }
             if(choix == 2)
             {
