@@ -55,7 +55,7 @@ namespace WoWW
                     Console.WriteLine("2. Choisir une équipe.");
                     Console.WriteLine("3. Voir mes Personnages (Pas encore fini)");
                     Console.WriteLine("X. EXIT");
-                    choix = Console.ReadLine();
+                    choix = Console.ReadLine().ToUpper();
 
                 } while (choix != "1" && choix != "2" && choix != "3" && choix != "X");
 
@@ -69,6 +69,9 @@ namespace WoWW
                         break;
                     case "3":
                         CharacterView.MenuCharacter(currentPlayer.Id);
+                        break;
+                    case "X":
+                        Console.WriteLine("Aurevoir " + currentPlayer.Name);
                         break;
                     default:
                         {
