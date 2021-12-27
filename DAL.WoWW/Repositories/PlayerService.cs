@@ -120,6 +120,21 @@ namespace DAL.WoWW.Repositories
                 }
             }
         }
+        public void ChangeName(int playerId, string newName)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Player SET name = @newName WHERE Id = @playerid";
+                    cmd.Parameters.AddWithValue("@newName", newName);
+                    cmd.Parameters.AddWithValue("@playerid", playerId);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
         public Player Login(string email, string password)
         {

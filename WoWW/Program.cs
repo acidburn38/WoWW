@@ -30,12 +30,14 @@ namespace WoWW
     {
         static void Main(string[] args)
         {
+
             // CREATION Player View pour pouvoir y accéder tout le temps depuis la main
             PlayerView playerView = new PlayerView();
             Player currentPlayer = null;
 
-
-
+            // AFFICHER TITRE WOWW
+            AccueilView.AfficherWOWW();
+            
             // MENU D'ACCUEIL - TITRE + Menu S'inscrire ou se Connecter
             currentPlayer = AccueilView.AccueilMenu(playerView);
             currentPlayer = AccueilView.AccueilJoueur(currentPlayer);

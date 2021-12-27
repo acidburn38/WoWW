@@ -11,9 +11,7 @@ namespace WoWW.Views
     {
             public static Player currentPlayer;
             public static PlayerView playerView;
-        public static Player AccueilMenu(PlayerView playerView)
-        {
-
+        public static void AfficherWOWW(){
             Console.WriteLine("#     #                                                 #     #                  #     #                #####    #   ");
             Console.WriteLine("#  #  #  ####  #####  #      #####      ####  ######    #  #  #   ##   #####     #  #  #   ##   #####  #     #  ##   ");
             Console.WriteLine("#  #  #  ####  #####  #      #####      ####  ######    #  #  #   ##   #####     #  #  #   ##   #####  #     #  ##   ");
@@ -25,16 +23,24 @@ namespace WoWW.Views
             Console.WriteLine(" ## ##   ####  #    # ###### #####      ####  #          ## ##  #    # #    #     ## ##  #    # #####  ####### ##### ");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine(" ");
-            Console.WriteLine("Que faire ?");
-            Console.WriteLine("1. Créer un compte Player ?");
-            Console.WriteLine("2. Se connecter");
-            int choix = int.Parse(Console.ReadLine());
+        }
+
+        public static Player AccueilMenu(PlayerView playerView)
+        {
+            string choix;
+            do
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine("Que faire ?");
+                Console.WriteLine("1. Créer un nouveau compte Player ?");
+                Console.WriteLine("2. Se connecter");
+                choix = Console.ReadLine();
+            } while (choix != "1" && choix != "2");
 
             switch (choix)
             {
-                case 1: return currentPlayer = playerView.InscriptionJoueur(); break;
-                case 2: return currentPlayer = playerView.Connexion(); ; break;
+                case "1": return currentPlayer = playerView.InscriptionJoueur(); break;
+                case "2": return currentPlayer = playerView.Connexion(); ; break;
                 default:
                     {
                         Console.WriteLine("Choix invalide");
@@ -48,21 +54,28 @@ namespace WoWW.Views
 
         public static Player AccueilJoueur(Player currentPlayer)
         {
-            Console.WriteLine("Bonjour " + currentPlayer.Name);
-            Console.WriteLine("Que faire ?");
+            string choix;
+            do
+            {
 
-            Console.WriteLine("1. Mettre à jour mon profil.(Pas encore fini)");
-            Console.WriteLine("2. Choisir une équipe.");
-            Console.WriteLine("3. Voir mes Personnages (Pas encore fini)");
-            int choix = int.Parse(Console.ReadLine());
+                Console.WriteLine("Bonjour " + currentPlayer.Name);
+                Console.WriteLine("Que faire ?");
+
+                Console.WriteLine("1. Mettre à jour mon profil.(Pas encore fini)");
+                Console.WriteLine("2. Choisir une équipe.");
+                Console.WriteLine("3. Voir mes Personnages (Pas encore fini)");
+                choix = Console.ReadLine();
+
+            } while (choix != "1" && choix != "2" && choix != "3");
+
 
             switch (choix)
             {
-                case 1: AccueilJoueur(currentPlayer);
+                case "1": playerView.UpdateJoueur(currentPlayer);
                         return currentPlayer; break;
-                case 2: TeamView.MenuTeam(currentPlayer.Id);
+                case "2": TeamView.MenuTeam(currentPlayer.Id);
                         return currentPlayer; break;
-                case 3: CharacterView.MenuCharacter(currentPlayer.Id);
+                case "3": CharacterView.MenuCharacter(currentPlayer.Id);
                         return currentPlayer = playerView.Connexion(); ; break;
 
                 default:

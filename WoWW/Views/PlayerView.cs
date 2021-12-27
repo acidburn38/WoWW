@@ -53,5 +53,30 @@ namespace WoWW.Views
             return newPlayer;
 
         }
+
+
+        // PAS FINI - EN COURS !!!!
+        public Player UpdateJoueur(Player currentPlayer)
+        {
+       
+                Console.WriteLine("Que voulez vous modifier ?");
+                Console.WriteLine("1. Votre nom : " + currentPlayer.Name + "Y/N");
+                if (Console.ReadLine()=="Y")
+                {
+                    Console.WriteLine("Nouveau Nom : ");
+                    currentPlayer.Name = Console.ReadLine();
+                    _service.ChangeName(currentPlayer.Id, currentPlayer.Name);
+                }
+                Console.WriteLine("2. Votre Mot de passe ?  Y/N");
+                if (Console.ReadLine() == "Y")
+                {
+                    Console.WriteLine("Nouveau mot de passe : ");
+                    currentPlayer.Password = Console.ReadLine();
+                    _service.ChangePassword(currentPlayer.Id, currentPlayer.Password);
+                }
+            return currentPlayer;
+
+
+        }
     }
 }
