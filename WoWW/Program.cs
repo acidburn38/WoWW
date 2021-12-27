@@ -40,16 +40,43 @@ namespace WoWW
             
             // MENU D'ACCUEIL - TITRE + Menu S'inscrire ou se Connecter
             currentPlayer = AccueilView.AccueilMenu(playerView);
-            currentPlayer = AccueilView.AccueilJoueur(currentPlayer);
+            //currentPlayer = AccueilView.AccueilJoueur(currentPlayer);
 
-            // MENU ACCUEIL JOUEUR
+            // MENU ACCUEIL JOUEUR (Update, Team, Perso)
+            string choix;
+            do
+            {
+                do
+                {
+                    Console.WriteLine("Bonjour " + currentPlayer.Name);
+                    Console.WriteLine("Que faire ?");
 
-            Console.WriteLine("test Ok ?");
-            Console.ReadLine();
+                    Console.WriteLine("1. Mettre à jour mon profil.(Pas encore fini)");
+                    Console.WriteLine("2. Choisir une équipe.");
+                    Console.WriteLine("3. Voir mes Personnages (Pas encore fini)");
+                    Console.WriteLine("X. EXIT");
+                    choix = Console.ReadLine();
 
+                } while (choix != "1" && choix != "2" && choix != "3" && choix != "X");
 
-            //TeamView.MenuTeam(currentPlayer.Id);
-
+                switch (choix)
+                {
+                    case "1":
+                        currentPlayer = playerView.UpdateJoueur(currentPlayer);
+                        break;
+                    case "2":
+                        TeamView.MenuTeam(currentPlayer.Id);
+                        break;
+                    case "3":
+                        CharacterView.MenuCharacter(currentPlayer.Id);
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("Choix invalide");
+                            break;
+                        }
+                };
+            } while (choix != "X");
 
 
 

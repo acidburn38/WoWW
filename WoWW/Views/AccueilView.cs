@@ -52,7 +52,7 @@ namespace WoWW.Views
 
         }
 
-        public static Player AccueilJoueur(Player currentPlayer)
+        public static void AccueilJoueur(Player currentPlayer)
         {
             string choix;
             do
@@ -72,17 +72,15 @@ namespace WoWW.Views
             switch (choix)
             {
                 case "1": playerView.UpdateJoueur(currentPlayer);
-                        return currentPlayer; break;
+                            break;
                 case "2": TeamView.MenuTeam(currentPlayer.Id);
-                        return currentPlayer; break;
+                            break;
                 case "3": CharacterView.MenuCharacter(currentPlayer.Id);
-                        return currentPlayer = playerView.Connexion(); ; break;
-
+                            break;
                 default:
                     {
                         Console.WriteLine("Choix invalide");
                         AccueilJoueur(currentPlayer);
-                        return currentPlayer = null;
                         break;
                     }
             };
