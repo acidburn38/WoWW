@@ -12,7 +12,7 @@ namespace WoWW
 //-	Si Login => Form Login + Mot de passe => Si correct => Menu Player
 //-	Menu Player :
 //o Afficher Liste Characters + Details(ou pas encore de character => Ajouter un Character)
-//o Afficher info Team(nom+score)  (ou Choisir Team)
+//o Afficher info Team(nom+score +Liste de joueur?)  (ou Choisir Team)
 //+ Menu Player :
 //	Mettre à jour profil Player(update Player)
 //	Ajouter Character => Formulaire Create Character(choisir Nom + Type)

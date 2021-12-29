@@ -65,12 +65,15 @@ namespace DAL.WoWW.Repositories
             {
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO [Character] (name, FK_Type, FK_Player) VALUES (@name, @)";
+                    cmd.CommandText = "INSERT INTO [Character] (name, LP, AP, status, FK_Type, FK_Player) VALUES (@name,  @LP, @AP, @status, @FK_Type, @FK_Player)";
 
                     cmd.Parameters.AddWithValue("@name", perso.Name);
+                    cmd.Parameters.AddWithValue("@LP", perso.LP);
+                    cmd.Parameters.AddWithValue("@AP", perso.AP);
+                    cmd.Parameters.AddWithValue("@status", perso.Status);
                     cmd.Parameters.AddWithValue("@FK_Type", perso.FK_Type);
                     cmd.Parameters.AddWithValue("@FK_Player", perso.FK_Player);
-
+                    
                     connection.Open();
                     return cmd.ExecuteNonQuery() == 1;
                     //connection.Close();

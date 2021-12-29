@@ -55,7 +55,7 @@ namespace WoWW.Views
         }
 
 
-        // PAS FINI - EN COURS !!!!
+        // Mise à jour Joueur NOM ou réinitialiser mot de passe
         public Player UpdateJoueur(Player currentPlayer)
         {
        

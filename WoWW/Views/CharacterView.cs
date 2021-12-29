@@ -33,7 +33,7 @@ namespace WoWW.Views
             public static void CreationCharacter(int playerId)
         {
             Character newCharacter = new Character();
-            Console.WriteLine("Création de team ");
+            Console.WriteLine("Création du nouveau Personnage");
             Console.Write("Nom : ");
             newCharacter.Name = Console.ReadLine();
 
