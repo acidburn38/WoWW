@@ -34,6 +34,9 @@ namespace WoWW.Views
         {
             Character newCharacter = new Character();
             Console.WriteLine("Création du nouveau Personnage");
+
+            Console.Write("1. Type de ton Personnage : ");
+            
             Console.Write("Nom : ");
             newCharacter.Name = Console.ReadLine();
 

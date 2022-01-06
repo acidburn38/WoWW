@@ -48,10 +48,10 @@ namespace WoWW
             {
                 do
                 {
-                    Console.WriteLine("Bonjour " + currentPlayer.Name);
+                    Console.WriteLine("\nBonjour " + currentPlayer.Name);
                     Console.WriteLine("Que faire ?");
 
-                    Console.WriteLine("1. Mettre à jour mon profil.(Pas encore fini)");
+                    Console.WriteLine("1. Mettre à jour mon profil.");
                     Console.WriteLine("2. Choisir une équipe.");
                     Console.WriteLine("3. Voir mes Personnages (Pas encore fini)");
                     Console.WriteLine("X. EXIT");
