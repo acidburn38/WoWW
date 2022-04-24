@@ -39,26 +39,27 @@ namespace DAL.WoWW.Repositories
                 }
             }
         }
-        //public Type GetById(int Id)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_connectionString))
-        //    {
-        //        using (SqlCommand cmd = connection.CreateCommand())
-        //        {
-        //            cmd.CommandText = "SELECT * FROM Type WHERE Id = @id";
-        //            cmd.Parameters.AddWithValue("id", Id);
-        //            connection.Open();
-        //            using (SqlDataReader reader = cmd.ExecuteReader())
-        //            {
-        //                if (reader.Read())
-        //                {
-        //                    return Mapper.ConvertType(reader);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return null;
-        //}
+
+        public TypeCharacter GetById(int Id)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Type WHERE Id = @id";
+                    cmd.Parameters.AddWithValue("id", Id);
+                    connection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return Mapper.ConvertType(reader);
+                        }
+                    }
+                }
+            }
+            return null;
+        }
 
         public bool Create(TypeCharacter type)
         {

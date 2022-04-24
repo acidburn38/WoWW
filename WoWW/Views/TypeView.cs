@@ -85,24 +85,25 @@ namespace WoWW.Views
             TypeService service = new TypeService();
             TypeCharacter selectedType = service.GetById(idType);
             Console.WriteLine("Id : "+ selectedType.Id);
-            Console.WriteLine("Nom : "+ selectedType.Name);
-            Console.WriteLine("Score : "+ selectedType.Score);
+            Console.WriteLine("Nom : "+ selectedType.NameType);
+            Console.WriteLine("Live Points : "+ selectedType.MinLP + " - " + selectedType.MaxLP);
+            Console.WriteLine("Attack Points : "+ selectedType.MinAP + " - " + selectedType.MaxAP);
 
             Console.WriteLine("");
             Console.WriteLine("S'y inscire ? 1 - Oui, 2 - Non");
             int choix = int.Parse(Console.ReadLine());
 
-            if(choix == 1)
-            {
-                PlayerService _playerService = new PlayerService();
-                _playerService.SetTypeToPlayer(playerId, idType);
-                Console.WriteLine("Merci pour votre inscription");
-                //MenuType(playerId); FAIRE UNE SUITE POUR RETOURNER AU MENU JOUEUR
-            }
-            if(choix == 2)
-            {
-                MenuType(playerId);
-            }
+            //if(choix == 1)
+            //{
+            //    PlayerService _playerService = new PlayerService();
+            //    _playerService.SetTypeToPlayer(playerId, idType);
+            //    Console.WriteLine("Merci pour votre inscription");
+            //    //MenuType(playerId); FAIRE UNE SUITE POUR RETOURNER AU MENU JOUEUR
+            //}
+            //if(choix == 2)
+            //{
+            //    MenuType(playerId);
+            //}
 
         }
     }
