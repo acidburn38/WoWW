@@ -28,7 +28,7 @@ namespace WoWW.Views
 
             if(currentPlayer is null)
             {
-                Console.WriteLine("Utilisateur inexistant, veuillez rééssayer");
+                Console.WriteLine("Utilisateur inexistant, veuillez réessayer");
                 Connexion();
             }
 
